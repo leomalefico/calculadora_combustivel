@@ -2,15 +2,20 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>FuelWise — Calculadora de Combustível</title>
-    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <div class="bg-gradient"></div>
+    <!-- Background sutile -->
+    <div class="bg-pattern"></div>
 
     <div class="container">
         <!-- Header -->
@@ -28,61 +33,61 @@
             <p class="subtitle">Descubra qual combustível compensa mais</p>
         </header>
 
-        <!-- Card Principal -->
+        <!-- Card -->
         <main class="card">
-            <form id="combustivelForm">
+            <form id="combustivelForm" autocomplete="off">
                 <div class="form-grid">
-                    <!-- Gasolina -->
+                    <!-- Gasolina Preço -->
                     <div class="input-group">
                         <label class="input-label">
-                            <span class="fuel-dot gas"></span>
+                            <span class="dot gas"></span>
                             Preço da Gasolina (R$/L)
                         </label>
                         <div class="input-wrapper">
-                            <span class="input-prefix">R$</span>
+                            <span class="prefix">R$</span>
                             <input type="number" id="precoGasolina" step="0.01" min="0" placeholder="6,19" required />
                         </div>
                     </div>
 
-                    <!-- Álcool -->
+                    <!-- Álcool Preço -->
                     <div class="input-group">
                         <label class="input-label">
-                            <span class="fuel-dot alc"></span>
+                            <span class="dot alc"></span>
                             Preço do Álcool (R$/L)
                         </label>
                         <div class="input-wrapper">
-                            <span class="input-prefix">R$</span>
+                            <span class="prefix">R$</span>
                             <input type="number" id="precoAlcool" step="0.01" min="0" placeholder="4,39" required />
                         </div>
                     </div>
 
-                    <!-- Consumo Gasolina -->
+                    <!-- Gasolina Consumo -->
                     <div class="input-group">
                         <label class="input-label">
-                            <span class="fuel-dot gas"></span>
+                            <span class="dot gas"></span>
                             Consumo Gasolina (km/L)
                         </label>
                         <div class="input-wrapper">
                             <input type="number" id="consumoGasolina" step="0.1" min="0" placeholder="12,5" required />
-                            <span class="input-suffix">km/L</span>
+                            <span class="suffix">km/L</span>
                         </div>
                     </div>
 
-                    <!-- Consumo Álcool -->
+                    <!-- Álcool Consumo -->
                     <div class="input-group">
                         <label class="input-label">
-                            <span class="fuel-dot alc"></span>
+                            <span class="dot alc"></span>
                             Consumo Álcool (km/L)
                         </label>
                         <div class="input-wrapper">
                             <input type="number" id="consumoAlcool" step="0.1" min="0" placeholder="8,5" required />
-                            <span class="input-suffix">km/L</span>
+                            <span class="suffix">km/L</span>
                         </div>
                     </div>
                 </div>
 
                 <button type="submit" class="btn-calcular">
-                    <span>🔍</span>
+                    <span class="btn-icon">🔍</span>
                     Verificar Vantagem
                 </button>
             </form>
@@ -99,35 +104,34 @@
 
                 <div class="comparison-bars">
                     <div class="bar-row">
-                        <div class="bar-label">
-                            <span class="fuel-dot gas"></span>
+                        <span class="bar-label">
+                            <span class="dot gas"></span>
                             Gasolina
-                        </div>
+                        </span>
                         <div class="bar-track">
                             <div class="bar-fill gas" id="barGasolina" style="width: 0%"></div>
                         </div>
-                        <div class="bar-value" id="custoGasolina">R$ 0,00/km</div>
+                        <span class="bar-value" id="custoGasolina">R$ 0,00/km</span>
                     </div>
                     <div class="bar-row">
-                        <div class="bar-label">
-                            <span class="fuel-dot alc"></span>
+                        <span class="bar-label">
+                            <span class="dot alc"></span>
                             Álcool
-                        </div>
+                        </span>
                         <div class="bar-track">
                             <div class="bar-fill alc" id="barAlcool" style="width: 0%"></div>
                         </div>
-                        <div class="bar-value" id="custoAlcool">R$ 0,00/km</div>
+                        <span class="bar-value" id="custoAlcool">R$ 0,00/km</span>
                     </div>
                 </div>
 
                 <div class="economia-box" id="economiaBox">
                     <span class="economia-icon">💰</span>
-                    <span id="economiaTexto">Economia de R$ 0,00/km com Gasolina</span>
+                    <span id="economiaTexto">Economia de R$ 0,0000/km com Gasolina</span>
                 </div>
             </div>
         </main>
 
-        <!-- Footer -->
         <footer class="footer">
             <p>FuelWise — Calculadora Inteligente de Combustível</p>
             <p class="footer-hint">Use a regra dos 70%: se o álcool custar até 70% da gasolina, ele compensa</p>
