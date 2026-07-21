@@ -37,12 +37,12 @@ O **FuelWise** calcula o custo real por quilômetro rodado considerando tanto o 
 
 ##  Funcionalidades
 
-- ** Barras comparativas animadas** — Visualização proporcional do custo por km
-- ** Painel de economia** — Mostra exatamente quanto você economiza por km
-- ** Dark / Light mode** — Alternância com preferência salva no navegador
-- ** 100% responsivo** — Funciona perfeitamente em celular, tablet e desktop
-- ** Design moderno** — Limpo, profissional com transições suaves
-- ** 100% client-side** — Zero dependências, roda direto no navegador
+- **Barras comparativas animadas** — Visualização proporcional do custo por km
+- **Painel de economia** — Mostra exatamente quanto você economiza por km
+- **Dark / Light mode** — Alternância com preferência salva no navegador
+- **100% responsivo** — Funciona perfeitamente em celular, tablet e desktop
+- **Design moderno** — Limpo, profissional com transições suaves
+- **100% client-side** — Zero dependências, roda direto no navegador
 
 ##  Como usar
 
